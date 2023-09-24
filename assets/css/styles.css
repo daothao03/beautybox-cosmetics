@@ -542,27 +542,27 @@ a {
     word-break: break-all; /*xuống dòng nếu quá dài */
 }
 
-.flashsale .price {
+.price {
     position: relative;
     margin-top: 10px;
     display: flex;
     justify-content: center;
 }
 
-.flashsale .price .price-dis {
+.price .price-dis {
     font-size: 1.5rem;
     font-weight: 800;
     margin-right: 15px;
 }
 
-.flashsale .price .price-initial span:first-child {
+.price .price-initial span:first-child {
     font-size: 1.4rem;
     color: #7a7a7a;
     text-decoration: line-through;
     margin-right: 20px;
 }
 
-.flashsale .price .price-initial .tag-price-dis {
+.price .price-initial .tag-price-dis {
     font-size: 1.3rem;
     font-weight: 800;
     z-index: 2;
@@ -590,14 +590,14 @@ a {
     border-bottom: 7.5px solid transparent;
 } */
 
-.flashsale .star {
+.star {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     font-size: 1.3rem;
 }
 
-.flashsale .star .star-validate {
+.star .star-validate {
     margin-right: 15px;
 }
 
@@ -657,7 +657,7 @@ a {
 /* ============= Top Product ============= */
 
 .top-product .content {
-    margin-top: 20px;
+    margin-top: 70px;
     background: #fff;
 }
 
@@ -1061,7 +1061,6 @@ a {
 /* ================= Brand ================== */
 .brand {
     margin-top: 100px;
-    height: 5000px;
 }
 
 .brand .content {
@@ -1076,20 +1075,20 @@ a {
     width: 400px;
     height: 800px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .brand .product-tobrand .btn-brand {
+    position: relative;
+    width: 900px;
+    height: 56px;
+    border: 2px solid var(--primary-color);
+    border-radius: 999px;
+    padding: 0 2px;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.brand .product-tobrand .btn-brand {
-    width: 770px;
-    height: 56px;
-    border: 2px solid var(--primary-color);
-    border-radius: 999px;
 }
 
 .brand .product-tobrand .btn-brand img {
@@ -1098,25 +1097,124 @@ a {
     object-fit: cover;
 }
 
+.brand .product-tobrand .list-product {
+    width: 900px;
+}
+
+.brand .product-tobrand .tab-brand {
+    padding: 0 10px;
+}
+
+/* .brand .product-tobrand .tab-brand:hover {
+    background: var(--primary-color);
+    border-radius: 999px;
+} */
+
+.brand .product-tobrand .tab-brand.actions {
+    background: var(--primary-color);
+    border-radius: 999px;
+    transition: all 0.3s ease;
+}
+
 .brand .img-items,
-.brand .magazine {
+.brand .brand-product {
     display: none;
 }
 
 .brand .img-items.actions,
-.brand .magazine.actions {
+.brand .brand-product.actions {
     display: block;
 }
 
 .brand .list-items {
     display: flex;
     flex-wrap: wrap;
-    width: 90px;
     justify-content: space-between;
+}
+
+.brand .product-item {
+    width: calc(25% - 30px);
+    margin-bottom: 10px;
 }
 
 .brand .product-item img {
     width: 191px;
     height: 191px;
     object-fit: cover;
+}
+
+.brand .body .name-company {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    color: #000339;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.brand .product-item .title a {
+    margin-top: 5px;
+    color: #000;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.25; /* 100% */
+}
+
+.brand .product-item .title {
+    margin-top: 7px;
+    width: 200px;
+    color: #a3a6ab;
+    font-size: 1.4rem;
+    line-height: 1.25;
+    --line-clamp: 2;
+    word-break: break-all; /*xuống dòng nếu quá dài */
+}
+
+.brand .price .price-dis {
+    margin-top: 2px;
+    font-size: 1.2rem;
+}
+
+.brand .price .price-initial span:first-child {
+    font-size: 1.2rem;
+    margin-top: -3px;
+}
+
+.brand .price .price-initial .tag-price-dis {
+    font-size: 1.1rem;
+}
+
+.brand .star {
+    margin-top: 7px;
+    font-size: 1.1rem;
+}
+
+.btn-brand-famous {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-brand-famous a {
+    color: var(--primary-color);
+}
+
+.btn-brand-famous a:hover {
+    text-decoration: underline var(--primary-color);
+}
+
+.btn-brand-famous i {
+    margin-left: 10px;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #c23564;
+    transition: all 0.2s ease;
 }
