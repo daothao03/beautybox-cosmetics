@@ -1,4 +1,4 @@
-var timeStart = new Date("Sep 30,2023 00:00:00").getTime();
+var timeStart = new Date("Dec 27,2023 00:00:00").getTime();
 
 setInterval(function () {
     var noW = new Date().getTime();

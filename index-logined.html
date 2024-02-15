@@ -118,9 +118,8 @@
             <!-- Header -->
             <!-- <header id="header" class="header"></header>
             <script>
-                load("#header", "./template/header.html");
+                load("#header", "./template/header-login.html");
             </script> -->
-
             <header class="header">
                 <div class="discount-info">
                     <div class="desc">100% chính hãng</div>
@@ -140,7 +139,7 @@
                         /></a>
             
                         <!-- Find Input  -->
-                        <form action="/beaty-box-cosmetic/index.html" method="get">
+                        <form action="/beaty-box-cosmetic/index-logined.html" method="get">
                             <div class="search">
                                 <button type="submit" style="cursor: pointer; width: 30px; height: 30px; background-color: aqua;" class="btn">
                                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
@@ -154,31 +153,123 @@
                                     placeholder="Freeship cho đơn từ 155K"
                                 />
                             </div>
-                        </form>
-            
+                        </form>                 
                         <div class="menu-section menu">
-                            <a href="./sign-in.html" class="link">
-                                <img
-                                    src="./assets/img/user-login.png"
-                                    alt=""
-                                    class="icon-img"
-                                />
-                                <span>Đăng nhập</span>
-                            </a>
-                            <a href="#!" class="link">
-                                <img
-                                    src="./assets/img/heart-3.png"
-                                    alt=""
-                                    class="icon-img"
-                                />
-                            </a>
-                            <a href="#!" class="link">
-                                <img
-                                    src="./assets/img/cart-3.png"
-                                    alt=""
-                                    class="icon-img"
-                                />
-                            </a>
+                            <div class="user-logined">
+                                <a href="./frofile.html" class="link link-login">
+                                    <span>ĐÀO THẢO</span>
+                                </a>
+                            </div>
+                            <div class="liked">
+                                <a href="#!" class="link">
+                                    <img
+                                        src="./assets/img/heart-3.png"
+                                        alt=""
+                                        class="icon-img"
+                                    />
+                                </a>
+                            </div>
+                            <div class="top-act__btn">
+                                <a href="./shipping.html" class="link">
+                                    <img
+                                        src="./assets/img/cart-3.png"
+                                        alt=""
+                                        class="icon-img"
+                                    />
+                                </a>
+            
+                                <!-- Dropdown -->
+                                <div class="btn-wrap">
+                                    <div class="act-dropdown">
+                                        <div class="act-dropdown__inner">
+                                            <img
+                                                src="./assets/img/arrow-up.svg"
+                                                alt=""
+                                                class="act-dropdown__arrow"
+                                            />
+                                            <div class="act-dropdown__top">
+                                                <h2 class="act-dropdown__title">
+                                                    Giỏ hàng của bạn
+                                                </h2>
+                                                <a
+                                                    href="./checkout.html"
+                                                    class="act-dropdown__view-all"
+                                                    >Xem tất cả</a
+                                                >
+                                            </div>
+            
+                                            <div class="row act-dropdown__list">
+                                                <div class="cart-preview">
+                                                    <!-- Cart preview item 1 -->
+                                                    <article class="cart-preview-item">
+                                                        <img
+                                                            src="./assets/img/prod-1.svg"
+                                                            alt=""
+                                                            class="cart-previewitem__thumb"
+                                                        />
+                                                        <div class="cart-preview-item__content">
+                                                            <h2
+                                                                class="cart-preview-item__title"
+                                                            >
+                                                                Tinh Chất Chống Lão Hóa AHC
+                                                                Youth Focus Essence
+                                                            </h2>
+                                                            <span
+                                                                class="cart-preview-item__price"
+                                                                >Giá: 1.320.000</span
+                                                            >
+                                                            <span>
+                                                                Số lượng: <span class="countItem">1</span>
+                                                            </span>
+                                                        </div>
+                                                    </article>
+            
+                                                    
+                                                </div>
+                                            </div>
+            
+                                            <div class="act-dropdown__bottom">
+                                                <div class="act-dropdown__row">
+                                                    <span class="act-dropdown__lable"
+                                                        >Giá:
+                                                    </span>
+                                                    <span class="act-dropdown__value"
+                                                        >1.320.000</span
+                                                    >
+                                                </div>
+            
+                                                <div class="act-dropdown__row">
+                                                    <span class="act-dropdown__lable"
+                                                        >Phí ship:
+                                                    </span>
+                                                    <span class="act-dropdown__value"
+                                                        >30000</span
+                                                    >
+                                                </div>
+            
+                                                <div
+                                                    class="act-dropdown__row act-dropdown__row-bold"
+                                                >
+                                                    <span class="act-dropdown__lable"
+                                                        >Tổng tiền
+                                                    </span>
+                                                    <span class="act-dropdown__value"
+                                                        >1.350.000</span
+                                                    >
+                                                </div>
+                                            </div>
+            
+                                            <div class="act-dropdown__checkout">
+                                                <a
+                                                    href="./checkout.html"
+                                                    class="btn-checkout button btn-primary hidden"
+                                                    >Thanh toán</a
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
             
@@ -728,7 +819,7 @@
             <section class="desc-discount">
                 <div class="content">
                     <div class="slide-container">
-                        <div class="slide" >
+                        <div class="slide">
                             <a href="#!"
                                 ><img
                                     class="img-slide"
@@ -790,9 +881,11 @@
                                                 >{{x.brand.name}}</span
                                             >
                                             <h3 class="title line-clamp">
-                                                
-                                                    <a href="./product-detail.html?id={{x.id}}">{{x.name}}</a
-                                                >
+                                                <a
+                                                    href="./product-detail.html?id={{x.id}}"
+                                                    >
+                                                    {{x.name}}
+                                            </a>
                                             </h3>
                                             <div class="price">
                                                 <span class="price-dis"
@@ -940,9 +1033,11 @@
                                                 >{{x.brand.name}}</span
                                             >
                                             <h3 class="title line-clamp">
-                                                
-                                                    <a href="./product-detail.html?id={{x.id}}">{{x.name}}</a
-                                                >
+                                                <a
+                                                    href="./product-detail.html?id={{x.id}}"
+                                                    >
+                                                    {{x.name}}
+                                                </a>
                                             </h3>
                                             <div class="price">
                                                 <span class="price-dis"
@@ -1124,6 +1219,7 @@
         <script src="./assets/angular/global.js"></script>
         <script src="./assets/angular/home.js"></script>
         <script src="./assets/angular/blog.js"></script>
+        <!-- <script src="./assets/angular/sign-in.js"></script> -->
         <!-- <script src="./assets/angular/prod-detail.js"></script> -->
     </body>
 </html>
